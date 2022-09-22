@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
     <style>
-        h1 {
-            color: paleturquoise;
+        h2 {
+            margin-top: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card-panel">
+                <form>
+                    <label>Enter a secret message</label>
+                    <input id="message-input" />
+                    <button class="btn">Create</button>
+                </form>
+            </div>
+            <div class="card-panel">
+                Share this link with a friend!
+                <input id="link-input" />
+                <a href="./index.html">Create a new message</a>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>

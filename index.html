@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Document</title>
     <style>
+        .row {
+            margin-top: 25vh;
+        }
+        
         h2 {
             margin-top: 0;
         }
@@ -15,14 +19,14 @@
 <body>
     <div class="row">
         <div class="col s8 offset-s2">
-            <div class="card-panel">
+            <div id="message-form" class="card-panel">
                 <form>
                     <label>Enter a secret message</label>
                     <input id="message-input" />
                     <button class="btn">Create</button>
                 </form>
             </div>
-            <div class="card-panel">
+            <div id="link-form" class="card-panel hide">
                 Share this link with a friend!
                 <input id="link-input" />
                 <a href="./index.html">Create a new message</a>

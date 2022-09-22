@@ -1,3 +1,13 @@
+const { hash } = window.location;
+
+const decryptedMessage = atob(hash.replace('#', ''));
+
+if (decryptedMessage) {
+    document.querySelector('#message-form').classList.add('hide');
+    document.querySelector('#message-show').classList.remove('hide');
+    document.querySelector('h1').innerHTML = decryptedMessage;
+}
+
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
 
@@ -10,5 +20,4 @@ document.querySelector('form').addEventListener('submit', event => {
     const linkInput = document.querySelector('#link-input');
     linkInput.value = `${window.location}#${encryptedMessage}`;
     linkInput.select();
-    console.log(window.location);
 });
